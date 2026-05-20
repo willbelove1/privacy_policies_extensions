@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách Quyền riêng tư – CookieVault</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#080f1e; --bg2:#0d1a30; --border:#1a2f50; --text:#e2e8f0; --muted:#64748b; --cyan:#06d6c8; --green:#22c55e; --amber:#f59e0b; --red:#ef4444; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:15px;scroll-behavior:smooth}
+    body{font-family:'Be Vietnam Pro',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+    .header{background:var(--bg2);border-bottom:1px solid var(--border);padding:20px 0}
+    .inner{max-width:740px;margin:0 auto;padding:0 24px}
+    .logo-row{display:flex;align-items:center;gap:12px}
+    .logo-box{width:38px;height:38px;background:rgba(6,214,200,0.12);border:1px solid var(--cyan);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+    .logo-name{font-size:16px;font-weight:800;color:var(--cyan)}
+    .logo-sub{font-size:10px;color:var(--muted);margin-top:1px}
+    .hero{max-width:740px;margin:44px auto 0;padding:0 24px}
+    .tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--cyan);background:rgba(6,214,200,0.08);border:1px solid rgba(6,214,200,0.2);border-radius:99px;padding:4px 12px;margin-bottom:14px}
+    h1{font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:10px}
+    .meta{font-size:12px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+    .summary{max-width:740px;margin:28px auto;padding:0 24px}
+    .summary-inner{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:12px;padding:18px 22px;display:flex;gap:14px}
+    .s-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+    .s-title{font-size:14px;font-weight:700;color:var(--green);margin-bottom:5px}
+    .s-text{font-size:13px;color:var(--muted);line-height:1.6}
+    .content{max-width:740px;margin:0 auto;padding:0 24px 80px}
+    .section{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border)}
+    .section:last-child{border-bottom:none}
+    .sec-num{font-size:10px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+    h2{font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin-bottom:12px}
+    p{color:var(--muted);font-size:13.5px;margin-bottom:10px}
+    p:last-child{margin-bottom:0}
+    .hl{color:var(--text);font-weight:600}
+    ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:10px}
+    ul li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--muted)}
+    ul li::before{content:'›';color:var(--cyan);font-weight:700;font-size:15px;line-height:1.4;flex-shrink:0}
+    .no-collect{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--green);background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:7px;padding:7px 13px;margin-bottom:12px}
+    table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
+    th{text-align:left;padding:9px 13px;background:var(--bg2);color:var(--muted);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--border)}
+    td{padding:11px 13px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:var(--bg2)}
+    .perm{font-family:'Courier New',monospace;font-size:11px;color:var(--cyan);background:rgba(6,214,200,0.08);border:1px solid rgba(6,214,200,0.15);border-radius:4px;padding:2px 7px;white-space:nowrap}
+    .warn-box{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:14px 18px;margin:12px 0}
+    .warn-title{font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px}
+    .contact-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;flex-direction:column;gap:10px}
+    .c-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+    .c-val{font-size:14px;font-weight:600;color:var(--text)}
+    .c-val a{color:var(--cyan)}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:11px;color:var(--muted)}
+    footer strong{color:var(--cyan)}
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="inner">
+    <div class="logo-row">
+      <div class="logo-box">🍪</div>
+      <div><div class="logo-name">CookieVault</div><div class="logo-sub">Xuất &amp; Bảo mật Cookie</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="tag">📄 Văn bản pháp lý</div>
+  <h1>Chính sách<br>Quyền riêng tư</h1>
+  <div class="meta">
+    <span>📅 Cập nhật: 01/06/2025</span>
+    <span>🔧 Chrome Extension – CookieVault</span>
+    <span>❤️ Lucas &amp; Dad</span>
+  </div>
+</div>
+
+<div class="summary">
+  <div class="summary-inner">
+    <div class="s-icon">🛡️</div>
+    <div>
+      <div class="s-title">Cam kết bảo mật</div>
+      <div class="s-text">CookieVault xử lý cookie <strong>hoàn toàn trên thiết bị của bạn</strong>. Chúng tôi không gửi, không lưu trữ từ xa, không chia sẻ bất kỳ cookie hay dữ liệu cá nhân nào.</div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <div class="sec-num">Điều 1</div>
+    <h2>Về Extension</h2>
+    <p><span class="hl">CookieVault</span> là tiện ích Chrome cho phép xuất, mã hóa AES-256 và nhập lại cookie của các trang web. Toàn bộ quá trình xử lý diễn ra cục bộ trên máy bạn.</p>
+    <p>Phát triển bởi <span class="hl">Lucas &amp; Dad</span>. Tài trợ bởi <span class="hl">Tân Thanh Company</span>.</p>
+  </div>
+
+  <div class="section">
+    <div class="sec-num">Điều 2</div>
+    <h2>Dữ liệu chúng tôi KHÔNG thu thập</h2>
+    <div class="no-collect">✓ Không thu thập – Không gửi – Không lưu từ xa</div>
+    <ul>
+      <li>Cookie của các trang web bạn sử dụng</li>
+      <li>Mật khẩu mã hóa bạn nhập</li>
+      <li>Lịch sử duyệt web, URL đang mở</li>
+      <li>Thông tin tài khoản Google / Chrome</li>
+      <li>Bất kỳ dữ liệu cá nhân nào khác</li>
+    </ul>
+    <div class="warn-box">
+      <div class="warn-title">⚠️ Lưu ý quan trọng về cookie</div>
+      <p style="margin:0;font-size:12px">Cookie chứa thông tin đăng nhập nhạy cảm. CookieVault không đọc, lưu hay gửi cookie đến bất kỳ server nào. Mọi thao tác export/import chỉ diễn ra giữa extension và trình duyệt của bạn.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-num">Điều 3</div>
+    <h2>Dữ liệu lưu cục bộ (Local)</h2>
+    <p>Extension dùng <span class="hl">chrome.storage.local</span> chỉ để lưu:</p>
+    <ul>
+      <li>Tùy chọn giao diện người dùng (theme, cài đặt hiển thị)</li>
+      <li>Không lưu cookie, không lưu mật khẩu</li>
+    </ul>
+    <p>Dữ liệu này chỉ tồn tại trên máy bạn. Gỡ cài đặt extension sẽ xóa hoàn toàn.</p>
+  </div>
+
+  <div class="section">
+    <div class="sec-num">Điều 4</div>
+    <h2>Giải thích các quyền</h2>
+    <table>
+      <thead><tr><th>Quyền</th><th>Lý do cần thiết</th></tr></thead>
+      <tbody>
+        <tr><td><span class="perm">cookies</span></td><td>Đọc và ghi cookie của tab hiện tại theo yêu cầu người dùng. Không tự động đọc khi không có thao tác.</td></tr>
+        <tr><td><span class="perm">activeTab</span></td><td>Lấy URL của tab đang mở để xác định domain cần thao tác cookie.</td></tr>
+        <tr><td><span class="perm">tabs</span></td><td>Truy cập thông tin tab hiện tại (URL, domain) để scope đúng cookie.</td></tr>
+        <tr><td><span class="perm">storage</span></td><td>Lưu cài đặt giao diện vào local storage. Không lưu dữ liệu nhạy cảm.</td></tr>
+        <tr><td><span class="perm">clipboardWrite</span></td><td>Sao chép cookie đã export vào clipboard khi người dùng nhấn nút Copy.</td></tr>
+        <tr><td><span class="perm">host_permissions: &lt;all_urls&gt;</span></td><td>Cần thiết để chrome.cookies API đọc/ghi cookie cho bất kỳ domain nào người dùng muốn thao tác.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="sec-num">Điều 5</div>
+    <h2>Kết nối mạng</h2>
+    <p>CookieVault <span class="hl">không kết nối đến bất kỳ server nào</span>. Extension hoạt động hoàn toàn offline sau khi cài đặt. Không có API call, không có telemetry, không có analytics.</p>
+    <p>Duy nhất kết nối mạng là tải font Google Fonts cho giao diện popup — không liên quan đến dữ liệu người dùng.</p>
+  </div>
+
+  <div class="section">
+    <div class="sec-num">Điều 6</div>
+    <h2>Chia sẻ với bên thứ ba</h2>
+    <p>Chúng tôi <span class="hl">không bán, không chia sẻ</span> bất kỳ dữ liệu nào — vì chúng tôi không có dữ liệu người dùng để chia sẻ.</p>
+  </div>
+
+  <div class="section">
+    <div class="sec-num">Điều 7</div>
+    <h2>Liên hệ</h2>
+    <div class="contact-card">
+      <div><div class="c-label">Nhà phát triển</div><div class="c-val">Lucas &amp; Dad</div></div>
+      <div><div class="c-label">Tài trợ</div><div class="c-val">Tân Thanh Company</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <strong>CookieVault</strong> · Chính sách Quyền riêng tư · Cập nhật 01/06/2025<br>
+  <span style="opacity:.5;font-size:10px;margin-top:3px;display:block">❤️ Lucas &amp; Dad · 🏢 Tân Thanh Company</span>
+</footer>
+</body>
+</html>
