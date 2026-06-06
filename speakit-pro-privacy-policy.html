@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách Quyền riêng tư – SpeakIt PRO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f0a1e;--bg2:#16102a;--border:#2a1f45;--text:#e2e8f0;--muted:#64748b;--accent:#c084fc;--green:#22c55e;--amber:#f59e0b;--red:#ef4444}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:15px;scroll-behavior:smooth}
+    body{font-family:'Be Vietnam Pro',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+    .header{background:var(--bg2);border-bottom:1px solid var(--border);padding:20px 0}
+    .inner{max-width:760px;margin:0 auto;padding:0 24px}
+    .logo-row{display:flex;align-items:center;gap:14px}
+    .logo-box{width:40px;height:40px;background:linear-gradient(135deg,#9333ea,#ec4899);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+    .logo-name{font-size:16px;font-weight:800;color:var(--accent)}
+    .logo-sub{font-size:10px;color:var(--muted);margin-top:1px}
+    .hero{max-width:760px;margin:40px auto 0;padding:0 24px}
+    .tag{display:inline-flex;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--accent);background:rgba(192,132,252,0.08);border:1px solid rgba(192,132,252,0.2);border-radius:99px;padding:4px 12px;margin-bottom:14px}
+    h1{font-size:32px;font-weight:800;letter-spacing:-0.8px;line-height:1.15;margin-bottom:10px}
+    .meta{font-size:12px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
+    .summary{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:12px;padding:18px 22px;display:flex;gap:14px;margin-bottom:32px}
+    .s-icon{font-size:22px;flex-shrink:0}
+    .s-title{font-size:14px;font-weight:700;color:var(--green);margin-bottom:5px}
+    .s-text{font-size:13px;color:var(--muted);line-height:1.6}
+    .content{max-width:760px;margin:0 auto;padding:0 24px 80px}
+    /* ── Data flow table ── */
+    .data-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+    .data-table th{text-align:left;padding:10px 14px;background:var(--bg2);color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--border)}
+    .data-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+    .data-table tr:hover td{background:var(--bg2)}
+    .data-table tr:last-child td{border-bottom:none}
+    /* ── Section ── */
+    .section{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .section:last-child{border-bottom:none}
+    .section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .sec-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    .sec-num{font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.6px}
+    h2{font-size:18px;font-weight:800;color:var(--text);margin:0}
+    p{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.7}
+    p:last-child{margin-bottom:0}
+    .hl{color:var(--text);font-weight:600}
+    ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin:10px 0}
+    ul li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--muted)}
+    ul li::before{content:'›';color:var(--accent);font-weight:700;font-size:15px;line-height:1.4;flex-shrink:0}
+    .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;border-radius:6px;padding:4px 10px}
+    .badge-green{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.2)}
+    .badge-amber{background:rgba(245,158,11,0.1);color:var(--amber);border:1px solid rgba(245,158,11,0.2)}
+    .badge-red{background:rgba(239,68,68,0.1);color:var(--red);border:1px solid rgba(239,68,68,0.2)}
+    .perm{font-family:'Courier New',monospace;font-size:11px;color:var(--accent);background:rgba(192,132,252,0.08);border:1px solid rgba(192,132,252,0.15);border-radius:4px;padding:2px 7px}
+    .alert-box{border-radius:10px;padding:14px 18px;margin:12px 0;font-size:13px}
+    .alert-green{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);color:var(--muted)}
+    .alert-amber{background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);color:var(--muted)}
+    .alert-title{font-weight:700;margin-bottom:4px}
+    .alert-green .alert-title{color:var(--green)}
+    .alert-amber .alert-title{color:var(--amber)}
+    .contact-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+    .c-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+    .c-val{font-size:14px;font-weight:600;color:var(--text)}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:18px 24px;text-align:center;font-size:11px;color:var(--muted)}
+    footer strong{color:var(--accent)}
+  </style>
+</head>
+<body>
 
+<div class="header">
+  <div class="inner">
+    <div class="logo-row">
+      <div class="logo-box">🌸</div>
+      <div>
+        <div class="logo-name">SpeakIt PRO</div>
+        <div class="logo-sub">AI English Mastery · Sakura Edition v3.0</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero inner">
+  <div class="tag">📄 Privacy Policy</div>
+  <h1>Chính sách Quyền riêng tư</h1>
+  <div class="meta">
+    <span>📅 Hiệu lực: 01/06/2025</span>
+    <span>🔄 Phiên bản: 3.0</span>
+    <span>❤️ Lucas &amp; Dad</span>
+  </div>
+
+  <div class="summary">
+    <div class="s-icon">🛡️</div>
+    <div>
+      <div class="s-title">Tóm tắt cam kết</div>
+      <div class="s-text">SpeakIt PRO lưu toàn bộ dữ liệu trên thiết bị / tài khoản Chrome của bạn. Chúng tôi <strong>không có server riêng, không thu thập, không đọc, không chia sẻ</strong> bất kỳ dữ liệu cá nhân nào của người dùng.</div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- ═══ 1. THU THẬP ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(192,132,252,0.1)">📥</div>
+      <div>
+        <div class="sec-num">Điều 1</div>
+        <h2>Dữ liệu thu thập</h2>
+      </div>
+    </div>
+
+    <p>SpeakIt PRO thu thập và lưu trữ các loại dữ liệu sau <span class="hl">hoàn toàn cục bộ</span> trên thiết bị của bạn thông qua <code>chrome.storage.sync</code>:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Loại dữ liệu</th>
+          <th>Nội dung cụ thể</th>
+          <th>Bắt buộc?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Từ vựng đã lưu</strong></td>
+          <td>Từ, phiên âm, định nghĩa, bản dịch, ngày lưu, số lần ôn tập, lịch SRS</td>
+          <td><span class="badge badge-green">Chức năng cốt lõi</span></td>
+        </tr>
+        <tr>
+          <td><strong>Cài đặt người dùng</strong></td>
+          <td>Ngôn ngữ dịch đích, mục tiêu từ mỗi ngày, tốc độ TTS, âm lượng</td>
+          <td><span class="badge badge-green">Chức năng cốt lõi</span></td>
+        </tr>
+        <tr>
+          <td><strong>Gemini API Key</strong></td>
+          <td>Key do người dùng tự nhập vào trang Options (xem chi tiết Điều 3)</td>
+          <td><span class="badge badge-amber">Tùy chọn (tính năng AI)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Thống kê học tập</strong></td>
+          <td>Streak, tổng số từ đã học, lịch sử hoạt động 14 ngày (chỉ số lượng)</td>
+          <td><span class="badge badge-green">Chức năng cốt lõi</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert-box alert-green">
+      <div class="alert-title">✓ Dữ liệu KHÔNG được thu thập</div>
+      Lịch sử duyệt web · URL trang đã truy cập · Thông tin tài khoản Google · Tên, email, địa chỉ · Nội dung trang web người dùng đọc · Bất kỳ thông tin định danh cá nhân nào
+    </div>
+  </div>
+
+  <!-- ═══ 2. XỬ LÝ ══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(34,211,238,0.1)">⚙️</div>
+      <div>
+        <div class="sec-num">Điều 2</div>
+        <h2>Xử lý dữ liệu</h2>
+      </div>
+    </div>
+
+    <p>Dữ liệu được xử lý như sau:</p>
+    <ul>
+      <li><span class="hl">Từ vựng:</span> khi người dùng highlight văn bản và nhấn "Lưu từ", extension đọc từ đó và lưu vào storage. Không có xử lý tự động khi người dùng không tương tác.</li>
+      <li><span class="hl">Tra từ điển:</span> từ được highlight gửi đến <code>dictionaryapi.dev</code> để lấy định nghĩa, phiên âm. Dữ liệu này không được lưu lại ngoài thiết bị.</li>
+      <li><span class="hl">Dịch thuật:</span> văn bản được chọn gửi đến <code>mymemory.translated.net</code> hoặc Google Gemini API (nếu người dùng đã cung cấp key). Kết quả chỉ hiển thị, không lưu server.</li>
+      <li><span class="hl">Text-to-Speech:</span> văn bản xử lý cục bộ qua Chrome TTS API, không gửi ra ngoài.</li>
+      <li><span class="hl">SRS Scheduling:</span> tính toán lịch ôn tập hoàn toàn cục bộ trong extension, không cần kết nối mạng.</li>
+    </ul>
+  </div>
+
+  <!-- ═══ 3. LƯU TRỮ ════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(245,158,11,0.1)">💾</div>
+      <div>
+        <div class="sec-num">Điều 3</div>
+        <h2>Lưu trữ dữ liệu</h2>
+      </div>
+    </div>
+
+    <p>Tất cả dữ liệu được lưu qua <span class="hl">chrome.storage.sync</span> — lưu trữ cục bộ do Chrome quản lý:</p>
+    <ul>
+      <li><strong>Vị trí lưu trữ:</strong> Trên thiết bị của người dùng và tự động sync qua tài khoản Google Chrome (nếu đã đăng nhập). Chúng tôi không có quyền truy cập vào dữ liệu này.</li>
+      <li><strong>Thời gian lưu trữ:</strong> Dữ liệu tồn tại cho đến khi người dùng chủ động xóa (nút Reset trong Options) hoặc gỡ cài đặt extension.</li>
+      <li><strong>Dung lượng:</strong> chrome.storage.sync giới hạn 100KB. Dữ liệu được tối ưu để không vượt giới hạn này.</li>
+    </ul>
+
+    <div class="alert-box alert-amber">
+      <div class="alert-title">⚠️ Đặc biệt về Gemini API Key</div>
+      API Key do người dùng tự nhập được lưu trong chrome.storage.sync. Key <strong>chỉ được gửi trực tiếp từ trình duyệt của bạn đến Google (generativelanguage.googleapis.com)</strong> khi bạn sử dụng tính năng dịch AI. Chúng tôi không bao giờ nhận, đọc hay lưu API Key của bạn trên bất kỳ server nào.
+    </div>
+  </div>
+
+  <!-- ═══ 4. CHIA SẺ ════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(239,68,68,0.1)">🔗</div>
+      <div>
+        <div class="sec-num">Điều 4</div>
+        <h2>Chia sẻ dữ liệu với bên thứ ba</h2>
+      </div>
+    </div>
+
+    <p>Extension kết nối đến các dịch vụ sau <span class="hl">chỉ khi người dùng chủ động sử dụng tính năng tương ứng</span>:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Bên thứ ba</th>
+          <th>Dữ liệu gửi đi</th>
+          <th>Mục đích</th>
+          <th>Privacy Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>dictionaryapi.dev</strong></td>
+          <td>Từ đơn được tra</td>
+          <td>Định nghĩa, phiên âm, ví dụ</td>
+          <td><a href="https://dictionaryapi.dev" target="_blank" style="color:var(--accent)">dictionaryapi.dev</a></td>
+        </tr>
+        <tr>
+          <td><strong>mymemory.translated.net</strong></td>
+          <td>Đoạn văn bản được chọn</td>
+          <td>Dịch thuật nhanh (khi không có Gemini key)</td>
+          <td><a href="https://mymemory.translated.net/doc/privacy.php" target="_blank" style="color:var(--accent)">Privacy Policy</a></td>
+        </tr>
+        <tr>
+          <td><strong>generativelanguage.googleapis.com</strong></td>
+          <td>Văn bản được chọn + Gemini API Key của người dùng</td>
+          <td>Dịch AI, phân tích từ khoá nâng cao</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent)">Google Privacy Policy</a></td>
+        </tr>
+        <tr>
+          <td><strong>fonts.googleapis.com</strong></td>
+          <td>Không có dữ liệu người dùng</td>
+          <td>Tải font chữ giao diện popup</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent)">Google Privacy Policy</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Ngoài các dịch vụ trên, dữ liệu của bạn <span class="hl">không được chia sẻ với bất kỳ bên nào khác</span>, bao gồm cả nhà phát triển. Chúng tôi không bán, không cho thuê dữ liệu người dùng.</p>
+  </div>
+
+  <!-- ═══ 5. PERMISSIONS ════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(192,132,252,0.1)">🔑</div>
+      <div>
+        <div class="sec-num">Điều 5</div>
+        <h2>Giải thích quyền (Permissions)</h2>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>Quyền</th><th>Lý do cần thiết</th></tr></thead>
+      <tbody>
+        <tr><td><span class="perm">contextMenus</span></td><td>Thêm menu chuột phải "Tra từ / Dịch" khi bôi đen văn bản.</td></tr>
+        <tr><td><span class="perm">tts</span></td><td>Phát âm từ và câu qua Chrome Text-to-Speech. Xử lý cục bộ.</td></tr>
+        <tr><td><span class="perm">storage</span></td><td>Lưu từ vựng, SRS schedule, cài đặt và API Key vào chrome.storage.sync.</td></tr>
+        <tr><td><span class="perm">alarms</span></td><td>Nhắc nhở ôn tập từ vựng theo lịch SRS hàng ngày.</td></tr>
+        <tr><td><span class="perm">scripting</span></td><td>Inject tooltip tra từ vào trang web khi người dùng highlight.</td></tr>
+        <tr><td><span class="perm">activeTab</span></td><td>Đọc nội dung tab hiện tại khi người dùng kích hoạt tính năng tra từ.</td></tr>
+        <tr><td><span class="perm">&lt;all_urls&gt;</span></td><td>Content script cần quyền trên mọi trang để người dùng tra từ ở bất cứ đâu.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══ 6. QUYỀN NGƯỜI DÙNG ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(34,197,94,0.1)">👤</div>
+      <div>
+        <div class="sec-num">Điều 6</div>
+        <h2>Quyền của người dùng</h2>
+      </div>
+    </div>
+    <ul>
+      <li><span class="hl">Truy cập:</span> Toàn bộ dữ liệu có thể xem trong popup và trang Options.</li>
+      <li><span class="hl">Xóa:</span> Nhấn "Reset dữ liệu" trong Options để xóa toàn bộ từ vựng và cài đặt.</li>
+      <li><span class="hl">Xuất:</span> Dùng nút "Export CSV" trên popup để tải toàn bộ từ vựng về máy.</li>
+      <li><span class="hl">Gỡ cài đặt:</span> Gỡ extension sẽ xóa toàn bộ dữ liệu local ngay lập tức.</li>
+    </ul>
+  </div>
+
+  <!-- ═══ 7. CẬP NHẬT & LIÊN HỆ ════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-icon" style="background:rgba(192,132,252,0.1)">✉️</div>
+      <div>
+        <div class="sec-num">Điều 7</div>
+        <h2>Cập nhật chính sách & Liên hệ</h2>
+      </div>
+    </div>
+    <p>Chính sách này có thể cập nhật khi có thay đổi về tính năng. Ngày hiệu lực mới sẽ ghi rõ ở đầu trang.</p>
+    <div class="contact-card" style="margin-top:14px">
+      <div><div class="c-label">Nhà phát triển</div><div class="c-val">Lucas &amp; Dad</div></div>
+      <div><div class="c-label">Tài trợ</div><div class="c-val">Tân Thanh Company</div></div>
+      <div><div class="c-label">Nguồn mở</div><div class="c-val"><a href="https://dictionaryapi.dev" style="color:var(--accent)">dictionaryapi.dev</a> · <a href="https://mymemory.translated.net" style="color:var(--accent)">MyMemory</a> · Google Gemini</div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>SpeakIt PRO</strong> · Chính sách Quyền riêng tư · Phiên bản 3.0 · Hiệu lực 01/06/2025<br>
+  <span style="opacity:.5;font-size:10px;margin-top:3px;display:block">❤️ Lucas &amp; Dad · 🏢 Tân Thanh Company</span>
+</footer>
+
+</body>
+</html>
