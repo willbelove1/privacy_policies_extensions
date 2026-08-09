@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chính sách quyền riêng tư — EasyTube V5 &amp; DVR-chan</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --sub:#555; --line:#e4e2dd; --bg:#fbfaf8; --accent:#b3261e;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:56px 24px 96px;}
+  h1{font-size:1.7rem; margin:0 0 4px; letter-spacing:-0.01em;}
+  .updated{color:var(--sub); font-size:0.9rem; margin:0 0 40px;}
+  h2{font-size:1.15rem; margin:40px 0 12px; padding-top:16px; border-top:1px solid var(--line);}
+  p, li{color:#2b2b2b; font-size:0.98rem;}
+  ul{padding-left:1.25em;}
+  li{margin-bottom:8px;}
+  .box{
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:16px 20px; margin:16px 0;
+  }
+  .box.ok{border-left:4px solid #1a7a4c;}
+  .box.warn{border-left:4px solid var(--accent);}
+  code{background:#f1efe9; padding:1px 6px; border-radius:4px; font-size:0.88em;}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:0.92rem;}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{color:var(--sub); font-weight:600; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.03em;}
+  .fill{background:#fff3cd; padding:1px 6px; border-radius:4px; font-weight:600;}
+  footer{margin-top:56px; padding-top:24px; border-top:1px solid var(--line); color:var(--sub); font-size:0.85rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="updated">Áp dụng cho tiện ích Chrome <strong>EasyTube V5 &amp; DVR-chan</strong> · Phát triển bởi <strong>Lucas &amp; Dad</strong> · Cập nhật lần cuối: <span class="fill">[điền ngày phát hành]</span></p>
+
+  <p>Tài liệu này giải thích tiện ích <strong>EasyTube V5 &amp; DVR-chan</strong> ("tiện ích") thu thập, sử dụng và lưu trữ dữ liệu như thế nào khi bạn cài đặt và sử dụng nó trên trình duyệt Chrome. Tiện ích được xây dựng với nguyên tắc thu thập tối thiểu: không tài khoản, không theo dõi, không quảng cáo bên trong tiện ích.</p>
+
+  <div class="box ok">
+    <strong>Tóm tắt nhanh:</strong> Tiện ích không thu thập, không lưu trữ trên máy chủ, và không bán dữ liệu cá nhân của bạn. Toàn bộ cài đặt được lưu cục bộ ngay trên trình duyệt của bạn.
+  </div>
+
+  <h2>1. Dữ liệu tiện ích lưu trữ (cục bộ, trên máy của bạn)</h2>
+  <p>Tiện ích dùng quyền <code>storage</code> của Chrome để lưu các tuỳ chọn bật/tắt tính năng — ví dụ: bật/tắt chặn quảng cáo, bật/tắt SponsorBlock, bật/tắt ép DVR. Dữ liệu này:</p>
+  <ul>
+    <li>Chỉ lưu trên trình duyệt của chính bạn (<code>chrome.storage</code>), không đồng bộ lên bất kỳ máy chủ nào do nhà phát triển vận hành;</li>
+    <li>Không chứa thông tin định danh cá nhân (họ tên, email, số điện thoại...);</li>
+    <li>Bị xoá hoàn toàn khi bạn gỡ cài đặt tiện ích.</li>
+  </ul>
+
+  <h2>2. Dữ liệu gửi tới dịch vụ bên thứ ba</h2>
+  <p>Để hoạt động, tiện ích gọi tới các dịch vụ bên ngoài sau:</p>
+  <table>
+    <tr><th>Dịch vụ</th><th>Mục đích</th><th>Dữ liệu gửi đi</th></tr>
+    <tr>
+      <td><strong>SponsorBlock API</strong><br><code>sponsor.ajay.app</code></td>
+      <td>Lấy mốc thời gian đoạn tài trợ/quảng cáo của video đang phát để tự động bỏ qua</td>
+      <td>ID video YouTube đang xem (dạng băm một phần theo chuẩn riêng tư của SponsorBlock). Không gửi tên, email, lịch sử duyệt web, hay bất kỳ thông tin định danh nào khác.</td>
+    </tr>
+  </table>
+  <p>Đây là dịch vụ công khai, mã nguồn mở, độc lập với nhà phát triển tiện ích này. Việc sử dụng dữ liệu của SponsorBlock tuân theo chính sách riêng của họ.</p>
+
+  <div class="box warn">
+    <strong>Lưu ý riêng về tính năng "Tải video":</strong> Nút tải video trong tiện ích mở một tab trình duyệt mới trỏ tới trang bên thứ ba (<code>evdfrance.fr</code>), kèm theo ID video bạn đang xem trong đường dẫn. Trang này <strong>không do nhà phát triển tiện ích vận hành, sở hữu, hay kiểm soát</strong> — một khi trang mở ra, mọi hoạt động, dữ liệu bạn cung cấp, và quảng cáo hiển thị trên đó thuộc phạm vi chính sách riêng của trang đó, không thuộc phạm vi tài liệu này. Tiện ích không thu thập lại bất kỳ dữ liệu nào từ trang này.
+  </div>
+
+  <h2>3. Những gì tiện ích KHÔNG làm</h2>
+  <ul>
+    <li>Không yêu cầu đăng nhập hay tạo tài khoản;</li>
+    <li>Không cài đặt cookie hay công cụ theo dõi/phân tích hành vi (analytics, tracking pixel);</li>
+    <li>Không thu thập lịch sử duyệt web, nội dung gõ phím, hay dữ liệu từ các trang web khác ngoài YouTube;</li>
+    <li>Không bán, cho thuê, hay chia sẻ dữ liệu người dùng cho bên thứ ba vì mục đích quảng cáo hay thương mại;</li>
+    <li>Không tải hay thực thi mã JavaScript từ máy chủ từ xa — toàn bộ logic đã đóng gói sẵn trong tiện ích khi cài đặt.</li>
+  </ul>
+
+  <h2>4. Quyền hạn (permissions) tiện ích yêu cầu</h2>
+  <table>
+    <tr><th>Quyền</th><th>Vì sao cần</th></tr>
+    <tr><td><code>storage</code></td><td>Lưu cục bộ tuỳ chọn bật/tắt tính năng của bạn giữa các phiên duyệt web</td></tr>
+    <tr><td>Content script trên <code>youtube.com</code></td><td>Đọc và điều chỉnh giao diện phát video YouTube để chặn quảng cáo, bỏ qua đoạn tài trợ, ép chất lượng, và mở khoá tua lại livestream</td></tr>
+    <tr><td>Host permission <code>sponsor.ajay.app</code></td><td>Gọi API SponsorBlock như mô tả ở mục 2</td></tr>
+  </table>
+
+  <h2>5. Trẻ em</h2>
+  <p>Tiện ích không hướng đến và không cố ý thu thập dữ liệu từ trẻ em dưới 13 tuổi.</p>
+
+  <h2>6. Quyền của bạn</h2>
+  <p>Vì mọi dữ liệu chỉ lưu cục bộ, bạn có toàn quyền kiểm soát:</p>
+  <ul>
+    <li>Xoá dữ liệu tuỳ chọn bất kỳ lúc nào bằng cách gỡ cài đặt tiện ích;</li>
+    <li>Kiểm tra/xoá dữ liệu lưu trữ qua <code>chrome://extensions</code> → chi tiết tiện ích → xoá dữ liệu duyệt web.</li>
+  </ul>
+
+  <h2>7. Thay đổi chính sách</h2>
+  <p>Nếu chính sách này thay đổi, phiên bản cập nhật sẽ được đăng tại cùng địa chỉ này kèm ngày cập nhật mới ở đầu trang.</p>
+
+  <h2>8. Liên hệ</h2>
+  <p>Mọi câu hỏi về chính sách quyền riêng tư này, vui lòng liên hệ:<br>
+  <span class="fill">[điền email liên hệ của Lucas &amp; Dad]</span></p>
+
+  <footer>
+    EasyTube V5 &amp; DVR-chan — phát triển &amp; port Manifest V3 bởi Lucas &amp; Dad.<br>
+    Dựa trên userscript gốc EasyTube V5 và DVR-chan.
+  </footer>
+
+</div>
+</body>
+</html>
