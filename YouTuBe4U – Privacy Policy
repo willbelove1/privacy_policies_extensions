@@ -1,0 +1,27 @@
+# YouTuBe4U – Privacy Policy / Chính Sách Quyền Riêng Tư
+
+*Effective Date: October 8, 2026 | Version: 1.0.2*
+
+## 1. Introduction / Giới thiệu
+The **YouTuBe4U** Chrome extension is committed to user privacy in full compliance with the Google Chrome Web Store Developer Program Policies. Tiện ích YouTuBe4U cam kết bảo vệ tối đa quyền riêng tư của người dùng.
+
+## 2. No Data Collection / Không thu thập dữ liệu
+- **No Personal Data**: YouTuBe4U does NOT collect, store, transmit, or sell your name, email, credentials, IP, or Google/YouTube account details. (Không thu thập bất kỳ thông tin định danh cá nhân nào).
+- **No Browsing History Tracking**: The extension operates strictly within YouTube domains (`*.youtube.com/*`, `*.youtubekids.com/*`) and never monitors activity on other websites. (Không theo dõi lịch sử duyệt web).
+- **No Data Selling**: We do not sell, rent, or transfer user data to third parties. (Không bán hoặc thương mại hóa dữ liệu).
+
+## 3. Local Storage / Dữ liệu lưu cục bộ
+All extension preferences (LumiTube ambient light brightness/color sliders, theater toggles, subtitle download options, and a local circular debug buffer of up to 500 lines) are stored exclusively on your local computer via `chrome.storage.local`. Dữ liệu chỉ nằm trên máy của bạn và không bao giờ gửi ra ngoài.
+
+## 4. Third-Party Network Requests / Yêu cầu mạng bên thứ ba
+To provide core features, YouTuBe4U makes anonymous read-only HTTP requests:
+- **SponsorBlock API (`sponsor.ajay.app`)**: Anonymously requests public sponsor timestamps using only the public YouTube Video ID.
+- **Return YouTube Dislike API (`returnyoutubedislikeapi.com`)**: Anonymously requests public aggregate dislike estimates using only the public YouTube Video ID.
+
+## 5. Permissions Justification / Giải trình quyền hạn
+- `storage`: Required to save user preferences locally on the browser.
+- `host_permissions` (`*.youtube.com`): Required to inject styles and scripts to enhance the YouTube video player, ambient lighting, custom theater, and subtitle downloading.
+- `host_permissions` (`sponsor.ajay.app`, `returnyoutubedislikeapi.com`): Required to fetch public sponsor segments and dislike statistics via background proxy bypassing CORS.
+
+## Contact
+For any privacy questions or inquiries, please contact the developer via the Chrome Web Store support tab.
