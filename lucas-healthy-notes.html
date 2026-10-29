@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính Sách Quyền Riêng Tư — Lucas Healthy Notes</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         max-width: 760px; margin: 0 auto; padding: 24px 18px 64px;
+         color: #1b1f1e; line-height: 1.65; background: #f6faf9; }
+  h1 { color: #0b6f66; font-size: 1.55rem; }
+  h2 { color: #0b6f66; font-size: 1.15rem; margin-top: 2rem; }
+  .card { background: #fff; border: 1px solid #d9e6e3; border-radius: 12px; padding: 20px 22px; }
+  hr { border: none; border-top: 1px solid #d9e6e3; margin: 3rem 0; }
+  small { color: #5c6b69; }
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Chính Sách Quyền Riêng Tư — Lucas Healthy Notes</h1>
+<p><small>Ngày hiệu lực: 29/10/2026 · Phiên bản ứng dụng áp dụng: 4.8.0 trở đi</small></p>
+
+<h2>1. Tổng quan</h2>
+<p>Lucas Healthy Notes (“app”) là sổ ghi chú sức khỏe cá nhân trên điện thoại Android. App hoạt động <strong>100% ngoại tuyến</strong>: app không có quyền truy cập Internet, không có máy chủ, không có tài khoản người dùng. Mọi dữ liệu bạn nhập chỉ tồn tại trên thiết bị của bạn.</p>
+
+<h2>2. Dữ liệu app lưu trữ (chỉ trên thiết bị của bạn)</h2>
+<ul>
+  <li>Các số đo sức khỏe bạn tự ghi: huyết áp, đường huyết, nồng độ oxy trong máu (SpO2), nhịp mạch, cân nặng.</li>
+  <li>Thông tin thuốc bạn khai báo để nhắc giờ uống thuốc: tên thuốc, liều lượng, giờ uống, số lượng còn lại.</li>
+  <li>Hồ sơ cơ bản bạn tự nguyện cung cấp: tên, năm sinh, chiều cao, vòng eo, giới tính sinh học, bệnh nền — dùng để cá nhân hóa ngưỡng cảnh báo và tính các chỉ số (BMI, BMR...) ngay trên máy.</li>
+  <li>Cài đặt trong app: giờ nhắc đo, giao diện, khóa sinh trắc học.</li>
+</ul>
+<p>Toàn bộ dữ liệu trên được lưu trong cơ sở dữ liệu <strong>mã hóa</strong> (SQLCipher) ngay trên thiết bị. Chúng tôi <strong>không thu thập, không truyền, không chia sẻ và không bán</strong> bất kỳ dữ liệu nào cho bất kỳ bên thứ ba nào — đơn giản vì app không có kết nối mạng để làm việc đó.</p>
+
+<h2>3. Quyền truy cập app sử dụng</h2>
+<ul>
+  <li><strong>Thông báo</strong> — để nhắc giờ đo chỉ số và giờ uống thuốc.</li>
+  <li><strong>Báo thức chính xác (SCHEDULE_EXACT_ALARM)</strong> — để nhắc uống thuốc đúng giờ; bạn tự cấp quyền này trong Cài đặt hệ thống.</li>
+  <li><strong>Rung</strong> — rung kèm thông báo nhắc nhở.</li>
+  <li><strong>Khởi động cùng máy (RECEIVE_BOOT_COMPLETED)</strong> — khôi phục lại lịch nhắc sau khi bạn khởi động lại điện thoại.</li>
+  <li><strong>Sinh trắc học</strong> — chỉ khi bạn chủ động bật khóa vân tay/khuôn mặt trong Cài Đặt; dữ liệu sinh trắc học do hệ thống Android quản lý, app không lưu trữ.</li>
+</ul>
+<p>Tính năng nhập bằng giọng nói dùng màn hình nhận dạng giọng nói của hệ thống Android (Intent). App <strong>không</strong> tự ghi âm và không khai báo quyền ghi âm.</p>
+
+<h2>4. Xuất dữ liệu theo yêu cầu của bạn</h2>
+<p>App cho phép bạn chủ động xuất dữ liệu ra file (PDF/CSV/Markdown/JSON) và sao lưu/khôi phục bằng file. Các file này do bạn tạo, lưu trong thư mục riêng của app trên thiết bị, và chỉ rời khỏi thiết bị khi <strong>chính bạn</strong> chia sẻ chúng đi nơi khác (ví dụ gửi cho bác sĩ). Chúng tôi không nhận được các file này.</p>
+
+<h2>5. Xóa dữ liệu</h2>
+<p>Bạn có thể xóa toàn bộ dữ liệu bất cứ lúc nào trong app (Cài Đặt → Xóa toàn bộ dữ liệu) hoặc bằng cách gỡ cài đặt app — toàn bộ dữ liệu trên thiết bị sẽ bị xóa theo. App không có bản sao dữ liệu ở bất kỳ nơi nào khác.</p>
+
+<h2>6. Tuyên bố y tế</h2>
+<p>Lucas Healthy Notes <strong>không phải thiết bị y tế</strong>, không chẩn đoán, không điều trị và không thay thế tư vấn của bác sĩ. Các nhận xét trong app chỉ là tóm tắt số liệu bạn đã ghi, tính ngay trên máy theo ngưỡng tham khảo phổ thông. Mọi quyết định y tế thuộc về bạn và bác sĩ của bạn.</p>
+
+<h2>7. Trẻ em</h2>
+<p>App hướng đến người lớn tự theo dõi sức khỏe tại nhà và người chăm sóc; app không hướng đến trẻ em dưới 13 tuổi.</p>
+
+<h2>8. Thay đổi chính sách</h2>
+<p>Nếu chính sách này thay đổi, phiên bản mới sẽ được đăng tại chính URL này kèm ngày hiệu lực mới. Thay đổi quan trọng về cách xử lý dữ liệu sẽ được ghi rõ trong ghi chú phát hành của app.</p>
+
+<h2>9. Liên hệ</h2>
+<p>Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ: <strong><a href="mailto:hantuyet055@gmail.com">hantuyet055@gmail.com</a></strong></p>
+</div>
+
+<hr>
+
+<div class="card" lang="en">
+<h1>Privacy Policy — Lucas Healthy Notes</h1>
+<p><small>Effective Date: October 29, 2026 · Applicable from version 4.8.0 onwards</small></p>
+<p>Lucas Healthy Notes is a personal health notebook for Android that works <strong>100% offline</strong>. The app has no Internet permission, no servers and no user accounts. Everything you record — blood pressure, glucose, SpO2, weight, medication schedules and your basic profile — is stored only on your device, in an encrypted database (SQLCipher). <strong>We do not collect, transmit, share or sell any data to anyone</strong>, because the app has no network connection to do so.</p>
+<p>The app uses: notifications and exact-alarm scheduling (only for the medication/measurement reminders you set up), vibration, boot-completed (to restore reminders after a reboot), and biometrics (only if you enable the optional app lock; biometric data is managed by Android and never stored by the app). Voice input is delegated to Android's system speech recognizer via Intent; the app does not record audio and does not request the microphone permission.</p>
+<p>You may export your data to files (PDF/CSV/Markdown/JSON) or back it up to a file at any time; those files leave your device only when you choose to share them. You can delete all data in Settings → Delete all data, or by uninstalling the app.</p>
+<p>This app is <strong>not a medical device</strong> and does not diagnose or treat any condition. In-app insights are summaries of your own recorded values computed on-device against common reference ranges. Always consult your doctor for medical decisions.</p>
+<p>The app is intended for adults tracking their own home measurements and for caregivers; it is not directed at children under 13.</p>
+<p>Contact: <strong><a href="mailto:hantuyet055@gmail.com">hantuyet055@gmail.com</a></strong></p>
+</div>
+</body>
+</html>
